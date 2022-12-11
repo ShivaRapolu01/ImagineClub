@@ -33,6 +33,7 @@ h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
+  width: 100vw;
 }
 
 .section-header {
@@ -779,7 +780,7 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services .service-box {
+/* .services .service-box {
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
   height: 100%;
   padding: 60px 30px;
@@ -929,12 +930,77 @@ section {
 
 .services .service-box:hover .icon {
   background: #fff;
+} */
+
+.services{
+  position: relative;
+  width:100vw; 
 }
+.services .tabs{
+  border:1px solid #fff;
+  height:27rem;
+  display:flex; 
+  justify-content:center;
+  align-items: center;
+  width:80%;
+  margin:0 10%; 
+  background: #F6F9FF;
+}
+.services .tabs__sidebar{
+  width:17rem; 
+  height:28rem;
+  flex-shrink:0; 
+  background: #F6F9FF;
+  position: absolute;
+  left:-2rem; 
+  top:0.2rem; 
+  border: 2px solid #1d5edf;
+}
+
+.services .tabs__button{
+  display:block;
+  padding:10px; 
+  background:#fff;
+  border:none; 
+  width:100%; 
+  outline:none; 
+  cursor:pointer; 
+  transition-duration: 0.5s;
+  /* border-bottom: 2px solid red; */
+}
+
+.services .tabs__button:active{
+  background: #1476F2;
+  color:#fff;
+}
+
+.services .tabs__button:not(:last-of-type){
+  border-bottom:1px solid #fff;
+}
+
+.services .tabs__button--active{
+  font-weight:bold; 
+  color:#fff; 
+  background: #1476F2;
+}
+
+.services .tabs__content{
+  padding:25px; 
+  font-size:0.8rem; 
+  display:none; 
+  padding-left: 16rem;
+}
+.services .tabs__content--active{
+  display:block;
+}
+/* .services .tabs__content > :first-child{
+  margin-top:0; 
+} */
 
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
-.pricing .box {
+/* .pricing .box {
   padding: 40px 20px;
   background: #fff;
   text-align: center;
@@ -1028,7 +1094,7 @@ section {
   padding: 1px 0 3px 0;
   background: #1476F2;
   color: #fff;
-}
+} */
 
 /*--------------------------------------------------------------
 # F.A.Q
