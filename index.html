@@ -561,6 +561,85 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eveniet dignissimos eligendi est deleniti cupiditate odio ipsam nostrum, reprehenderit eius nam modi repudiandae necessitatibus, alias, sint quis hic dolorem. Nulla quo amet, nihil exercitationem suscipit eius unde ad dolorum deserunt veritatis nam, distinctio nemo. Corporis quia fuga praesentium quaerat laudantium!</p>
           </div>
        </div>
+       <div class="container mobileview" data-aos="zoom-in">
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <h2>Software Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eveniet dignissimos eligendi est deleniti cupiditate
+                   odio ipsam nostrum, reprehenderit eius nam modi repudiandae necessitatibus, alias, sint quis hic dolorem. Nulla quo amet, 
+                </p>
+                <ul>
+                  <li>Point 1</li>
+                  <li>Point 2</li>
+                  <li>Point 3</li>
+                  <li>Point 4</li>
+                </ul>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <h2>Testing & QA</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eveniet dignissimos eligendi est deleniti cupiditate odio ipsam nostrum, reprehenderit eius nam modi repudiandae necessitatibus, alias, sint quis hic dolorem. Nulla quo amet, nihil exercitationem suscipit eius unde ad dolorum deserunt veritatis nam, distinctio nemo. Corporis quia fuga praesentium quaerat laudantium!</p>
+            </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <h2>Application Services</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eveniet dignissimos eligendi est deleniti cupiditate odio ipsam nostrum, reprehenderit eius nam modi repudiandae necessitatibus, alias, sint quis hic dolorem. Nulla quo amet, nihil exercitationem suscipit eius unde ad dolorum deserunt veritatis nam, distinctio nemo. Corporis quia fuga praesentium quaerat laudantium!</p>    
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <h2>UX/UI Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eveniet dignissimos eligendi est deleniti cupiditate odio ipsam nostrum, reprehenderit eius nam modi repudiandae necessitatibus, alias, sint quis hic dolorem. Nulla quo amet, nihil exercitationem suscipit eius unde ad dolorum deserunt veritatis nam, distinctio nemo. Corporis quia fuga praesentium quaerat laudantium!</p>    
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <h2>IT Consulting</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eveniet dignissimos eligendi est deleniti cupiditate odio ipsam nostrum, reprehenderit eius nam modi repudiandae necessitatibus, alias, sint quis hic dolorem. Nulla quo amet, nihil exercitationem suscipit eius unde ad dolorum deserunt veritatis nam, distinctio nemo. Corporis quia fuga praesentium quaerat laudantium!</p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <h2>Data Analytics</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eveniet dignissimos eligendi est deleniti cupiditate odio ipsam nostrum, reprehenderit eius nam modi repudiandae necessitatibus, alias, sint quis hic dolorem. Nulla quo amet, nihil exercitationem suscipit eius unde ad dolorum deserunt veritatis nam, distinctio nemo. Corporis quia fuga praesentium quaerat laudantium!</p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <h2>Help Desk Services</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eveniet dignissimos eligendi est deleniti cupiditate odio ipsam nostrum, reprehenderit eius nam modi repudiandae necessitatibus, alias, sint quis hic dolorem. Nulla quo amet, nihil exercitationem suscipit eius unde ad dolorum deserunt veritatis nam, distinctio nemo. Corporis quia fuga praesentium quaerat laudantium!</p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <h2>Infrastructure Services</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eveniet dignissimos eligendi est deleniti cupiditate odio ipsam nostrum, reprehenderit eius nam modi repudiandae necessitatibus, alias, sint quis hic dolorem. Nulla quo amet, nihil exercitationem suscipit eius unde ad dolorum deserunt veritatis nam, distinctio nemo. Corporis quia fuga praesentium quaerat laudantium!</p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <h2>Cybersecurity Services</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eveniet dignissimos eligendi est deleniti cupiditate odio ipsam nostrum, reprehenderit eius nam modi repudiandae necessitatibus, alias, sint quis hic dolorem. Nulla quo amet, nihil exercitationem suscipit eius unde ad dolorum deserunt veritatis nam, distinctio nemo. Corporis quia fuga praesentium quaerat laudantium!</p>
+              </div>
+            </div><!-- End testimonial item -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
     </section>
     <!-- ======= Pricing Section ======= -->
     <!-- <section id="pricing" class="pricing">
@@ -1367,15 +1446,10 @@
      function setupTabs(){
         document.querySelectorAll(".services .tabs__button").forEach(button=>{
           button.addEventListener("click",()=>{
-              console.log("hello")
               const sideBar=button.parentElement; 
               const tabsContainer=sideBar.parentElement; 
               const tabNumber=button.dataset.forTab; 
               const tabToActivate=tabsContainer.querySelector(`.tabs__content[data-tab="${tabNumber}"]`)
-              console.log(sideBar);
-              console.log(tabsContainer); 
-              console.log(tabNumber); 
-              console.log(tabToActivate)
               
               sideBar.querySelectorAll(".tabs__button").forEach(button=>{
                 button.classList.remove("tabs__button--active");

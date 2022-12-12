@@ -1,11 +1,15 @@
 
 :root {
   scroll-behavior: smooth;
+  --sidebarHeight:26.8rem;
+  --servicesNoTabs:9; 
 }
 
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  overflow-x: hidden;
+  width:100vw; 
 }
 
 a {
@@ -18,6 +22,9 @@ a:hover {
   text-decoration: none;
 }
 
+.header .logo a span{
+  font-size: 2px;
+}
 h1,
 h2,
 h3,
@@ -26,7 +33,9 @@ h5,
 h6 {
   font-family: "Nunito", sans-serif;
 }
-
+.header .logo a span{
+  font-size: 2px;
+}
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
@@ -934,10 +943,10 @@ section {
 
 .services{
   position: relative;
-  width:100vw; 
+  width:100vw;
+  overflow: visible;
 }
 .services .tabs{
-  border:1px solid #fff;
   height:27rem;
   display:flex; 
   justify-content:center;
@@ -945,27 +954,30 @@ section {
   width:80%;
   margin:0 10%; 
   background: #F6F9FF;
+  overflow: visible;
 }
 .services .tabs__sidebar{
-  width:17rem; 
-  height:28rem;
+  width:18vw; 
+  min-width: 15rem;
+  height:var(--sidebarHeight);
   flex-shrink:0; 
   background: #F6F9FF;
   position: absolute;
   left:-2rem; 
-  top:0.2rem; 
+  top:0.2rem;
   border: 2px solid #1d5edf;
 }
 
 .services .tabs__button{
   display:block;
-  padding:10px; 
+  height:calc(var(--sidebarHeight)/var(--servicesNoTabs)); 
   background:#fff;
   border:none; 
   width:100%; 
   outline:none; 
   cursor:pointer; 
   transition-duration: 0.5s;
+  color:black; 
   /* border-bottom: 2px solid red; */
 }
 
@@ -974,8 +986,10 @@ section {
   color:#fff;
 }
 
+
+
 .services .tabs__button:not(:last-of-type){
-  border-bottom:1px solid #fff;
+  /* border-bottom:1px solid rgb(36, 200, 255); */
 }
 
 .services .tabs__button--active{
@@ -985,14 +999,61 @@ section {
 }
 
 .services .tabs__content{
-  padding:25px; 
   font-size:0.8rem; 
   display:none; 
-  padding-left: 16rem;
+  padding:4vw 0 2vw;
+  padding-left: max(25%,15rem); 
+  padding-right:2vw; 
+  min-height:27rem;
+  height: max-content;
+
 }
 .services .tabs__content--active{
   display:block;
 }
+.services .tabs__content--active h2{
+  border-bottom: 4px solid #1476F2;
+}
+.services .tabs__content--active p{
+  margin-top: 2rem;
+  font-size: 1.1em;
+}
+.services .mobileview{
+  display: none;
+}
+@media screen and (max-width:769px) {
+  .services .tabs{
+    display:none; 
+  }
+  .services .mobileview{
+    display: block;
+  }
+}
+.services .swiper-slide{
+  height:38rem;  
+  padding:1rem; 
+}
+.services .swiper-slide .testimonial-item{
+   height:34rem;
+   padding:5vw;
+   border:2px solid #1476F2;   
+   box-shadow: 0px 0 30px rgba(125, 167, 240, 0.08);
+   z-index: 10;
+   background:#FFFFFF; 
+   font-size:1em;
+}
+  .services .swiper-slide .testimonial-item h2{
+    border-bottom: 4px solid #1476F2;
+  }
+  @media screen and (max-width:481) {
+    .services .swiper-slide{
+      height:auto;
+    }
+    .services .swiper-slide .testimonial-item{
+      height:auto; 
+    }
+  }
+
 /* .services .tabs__content > :first-child{
   margin-top:0; 
 } */
