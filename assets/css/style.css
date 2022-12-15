@@ -942,71 +942,55 @@ section {
 } */
 
 .services{
-  position: relative;
   width:100vw;
-  overflow: visible;
+  height:45rem;
+
+  overflow: hidden;
 }
 .services .tabs{
-  height:27rem;
+  height:30rem;
   display:flex; 
-  justify-content:center;
   align-items: center;
   width:80%;
   margin:0 10%; 
   background: #F6F9FF;
   overflow: visible;
 }
-.services .tabs__sidebar{
-  width:18vw; 
-  min-width: 15rem;
-  height:var(--sidebarHeight);
-  flex-shrink:0; 
-  background: #F6F9FF;
-  position: absolute;
-  left:-2rem; 
-  top:0.2rem;
-  border: 2px solid #1d5edf;
-}
 
 .services .tabs__button{
   display:block;
   height:calc(var(--sidebarHeight)/var(--servicesNoTabs)); 
-  background:#fff;
+  background: #1d5edf;
+  color:white;
   border:none; 
   width:100%; 
   outline:none; 
   cursor:pointer; 
   transition-duration: 0.5s;
-  color:black; 
   /* border-bottom: 2px solid red; */
 }
 
 .services .tabs__button:active{
-  background: #1476F2;
+  background:#132a57 ;
   color:#fff;
-}
-
-
-
-.services .tabs__button:not(:last-of-type){
-  /* border-bottom:1px solid rgb(36, 200, 255); */
 }
 
 .services .tabs__button--active{
   font-weight:bold; 
   color:#fff; 
-  background: #1476F2;
+  background: #132a57;
 }
+.services .tabs__button{
 
+}
 .services .tabs__content{
   font-size:0.8rem; 
   display:none; 
-  padding:4vw 0 2vw;
-  padding-left: max(25%,15rem); 
+  padding-top: 2vw;
+  padding-bottom: 4vw;
   padding-right:2vw; 
   min-height:27rem;
   height: max-content;
-
 }
 .services .tabs__content--active{
   display:block;
@@ -1015,20 +999,37 @@ section {
   border-bottom: 4px solid #1476F2;
 }
 .services .tabs__content--active p{
-  margin-top: 2rem;
   font-size: 1.1em;
 }
 .services .mobileview{
   display: none;
 }
-@media screen and (max-width:769px) {
-  .services .tabs{
-    display:none; 
-  }
-  .services .mobileview{
-    display: block;
-  }
+.services .tabs__sidebar_parent{
+  box-sizing: border-box;
+  padding:2rem;
+  background: #1d5edf;
+  width:22vw;
+  height:30rem;
+  min-width: 248px;
+  position: relative;
 }
+.services .tabs__sidebar{
+  position: absolute;
+  width:22vw; 
+  min-width: 15rem;
+  /* height:30rem; */
+  left:-2vw;
+  flex-shrink:0; 
+  background: #1d5edf;
+  color:white;
+  border:5px solid white
+}
+.services .tabs__content_parent{
+  width:60%;
+  padding-left: max(4vw,2rem);
+  min-width: 15rem;
+}
+
 .services .swiper-slide{
   height:38rem;  
   padding:1rem; 
@@ -1042,17 +1043,28 @@ section {
    background:#FFFFFF; 
    font-size:1em;
 }
-  .services .swiper-slide .testimonial-item h2{
+.services .swiper-slide .testimonial-item h2{
     border-bottom: 4px solid #1476F2;
+}
+@media screen and (max-width:769px) {
+  .services .tabs{
+    display:none; 
   }
-  @media screen and (max-width:481) {
-    .services .swiper-slide{
-      height:auto;
-    }
-    .services .swiper-slide .testimonial-item{
-      height:auto; 
-    }
+  .services .mobileview{
+    display: block;
   }
+  .services{
+    height:45rem;
+  }
+}
+@media screen and (max-width:481) {
+  .services .swiper-slide{
+    height:auto;
+  }
+  .services .swiper-slide .testimonial-item{
+    height:auto; 
+  }
+}
 
 /* .services .tabs__content > :first-child{
   margin-top:0; 
@@ -1641,6 +1653,7 @@ section {
   height:35rem;
   /* margin-bottom:3rem; */
 }
+
 .client_left{
   width:40%;
   padding-right:10rem;
@@ -1682,6 +1695,9 @@ section {
   border: 2px solid grey;
   margin:10px;
   padding:1rem; 
+}
+.client-card img{
+  object-fit: fill;
 }
 /*--------------------------------------------------------------
 # Clients mobile
